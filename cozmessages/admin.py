@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Cozmessage
+from .models import Cozmessage, Submit
 
 @admin.register(Cozmessage)
 class CozmessageAdmin(admin.ModelAdmin):
@@ -16,3 +16,9 @@ class CozmessageAdmin(admin.ModelAdmin):
 
     search_fields = ("username",)
 
+@admin.register(Submit)
+class SubmitAdmin(admin.ModelAdmin):
+
+    list_display = ("name", "githubId", "getMethod", "postMethod", "deleteMethod")
+    list_filter = ("name", "githubId",)
+    search_fields = ("name", "githubId",)

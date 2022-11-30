@@ -31,7 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 CUSTOM_APPS = [
-    "cozmessages.apps.CozmessagesConfig"
+    "cozmessages.apps.CozmessagesConfig",
 ]
 
 THIRD_PARTY_APPS=[
